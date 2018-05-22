@@ -1,6 +1,6 @@
 {
 	"name": "apache2-conf-formatter",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Format apache2 configuration files",
 	"license": "MIT",
 	"repository": "SavageCore/node-apache2-conf-formatter",
