@@ -1,0 +1,40 @@
+{
+	"name": "apache2-conf-formatter",
+	"version": "0.0.0",
+	"description": "Format apache2 configuration files",
+	"license": "MIT",
+	"repository": "SavageCore/node-apache2-conf-formatter",
+	"author": {
+		"name": "SavageCore",
+		"email": "talk@savagecore.eu",
+		"url": "savagecore.eu"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && nyc ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		""
+	],
+	"dependencies": {
+		"fs-jetpack": "^1.3.0",
+		"repeat-string": "^1.6.1"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"codecov": "^3.0.2",
+		"nyc": "^11.8.0",
+		"xo": "^0.21.1"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
+}

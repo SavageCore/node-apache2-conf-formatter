@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+ServerName example.com
+<Location />
+Options -Indexes
+</Location>
+</VirtualHost>
