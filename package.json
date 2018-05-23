@@ -9,7 +9,7 @@
 		"email": "talk@savagecore.eu",
 		"url": "savagecore.eu"
 	},
-	"engineStrict" : true,
+	"engineStrict": true,
 	"engines": {
 		"node": ">=7.6.0"
 	},
