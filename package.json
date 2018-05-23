@@ -9,8 +9,9 @@
 		"email": "talk@savagecore.eu",
 		"url": "savagecore.eu"
 	},
+	"engineStrict" : true,
 	"engines": {
-		"node": ">=8"
+		"node": ">=7.6.0"
 	},
 	"scripts": {
 		"test": "xo && nyc ava"
