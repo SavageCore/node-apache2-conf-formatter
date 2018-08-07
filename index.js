@@ -7,7 +7,7 @@ let curDepth = 0;
 
 module.exports = {
 	format: (file, options) => {
-		return new Promise(async (resolve, reject) => {
+		return new Promise(async (resolve, reject) => { // eslint-disable-line no-async-promise-executor
 			if (typeof file !== 'string') {
 				reject(new TypeError(`Expected a string, got ${typeof file}`));
 				return;
