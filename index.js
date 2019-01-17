@@ -7,7 +7,7 @@ let curDepth = 0;
 
 module.exports = {
 	format: (file, options) => {
-		return new Promise(async (resolve, reject) => { // eslint-disable-line no-async-promise-executor, require-await
+		return new Promise(async (resolve, reject) => { // eslint-disable-line no-async-promise-executor
 			if (typeof file !== 'string') {
 				reject(new TypeError(`Expected a string, got ${typeof file}`));
 				return;
@@ -42,9 +42,11 @@ module.exports = {
 				} else {
 					indent = getIndent(opts);
 				}
+
 				if (line.length === 0) {
 					indent = '';
 				}
+
 				buffer += `${indent}${line}\n`;
 			}).on('close', () => {
 				resolve(buffer);
@@ -69,5 +71,6 @@ function getIndent(opts) {
 	if (opts.useTabs) {
 		tab = '\t';
 	}
+
 	return repeat(tab, opts.tabWidth * curDepth);
 }
