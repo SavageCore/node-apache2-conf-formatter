@@ -6,16 +6,15 @@ const jetpack = require('fs-jetpack');
 /* eslint ava/no-skip-test: 0 */
 
 test('throws on incorrect input', async t => {
-	const number = await t.throws(m.format(123));
-	t.is(number.message, 'Expected a string, got number');
-
-	const res = await t.throws(m.format());
-	t.is(res.message, 'Expected a string, got undefined');
+	let error = await t.throwsAsync(m.format(123));
+	t.is(error.message, 'Expected a string, got number');
+	error = await t.throwsAsync(m.format());
+	t.is(error.message, 'Expected a string, got undefined');
 });
 
 test('throws on file not found', async t => {
-	const format = await t.throws(m.format('test/fixture/missing.txt'));
-	t.is(format.message, 'File does not exist: test/fixture/missing.txt');
+	const error = await t.throwsAsync(m.format('test/fixture/missing.txt'));
+	t.is(error.message, 'File does not exist: test/fixture/missing.txt');
 });
 
 test('default options', async t => {
