@@ -18,7 +18,7 @@ module.exports = {
 				return;
 			}
 
-			const opts = Object.assign({
+			const options_ = Object.assign({
 				useTabs: false,
 				tabWidth: 2
 			}, options);
@@ -35,12 +35,12 @@ module.exports = {
 				line = line.trim();
 				if (line[0] === '<') {
 					if (line[1] === '/') {
-						indent = endBlock(opts);
+						indent = endBlock(options_);
 					} else {
-						indent = startBlock(opts);
+						indent = startBlock(options_);
 					}
 				} else {
-					indent = getIndent(opts);
+					indent = getIndent(options_);
 				}
 
 				if (line.length === 0) {
@@ -55,22 +55,22 @@ module.exports = {
 	}
 };
 
-function startBlock(opts) {
-	const indent = getIndent(opts);
+function startBlock(options) {
+	const indent = getIndent(options);
 	curDepth += 1;
 	return indent;
 }
 
-function endBlock(opts) {
+function endBlock(options) {
 	curDepth -= 1;
-	return getIndent(opts);
+	return getIndent(options);
 }
 
-function getIndent(opts) {
+function getIndent(options) {
 	let tab = ' ';
-	if (opts.useTabs) {
+	if (options.useTabs) {
 		tab = '\t';
 	}
 
-	return repeat(tab, opts.tabWidth * curDepth);
+	return repeat(tab, options.tabWidth * curDepth);
 }
