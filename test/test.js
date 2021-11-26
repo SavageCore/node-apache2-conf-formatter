@@ -3,7 +3,7 @@ import m from '..';
 
 const jetpack = require('fs-jetpack');
 
-/* eslint ava/no-skip-test: 0 */
+/* eslint ava/no-skip-test: 0, unicorn/prefer-module: 0 */
 
 test('throws on incorrect input', async t => {
 	let error = await t.throwsAsync(m.format(123));

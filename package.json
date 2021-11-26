@@ -14,7 +14,8 @@
 		"node": ">=7.6.0"
 	},
 	"scripts": {
-		"test": "xo && nyc ava"
+		"test": "xo && nyc ava",
+		"prepare": "husky install"
 	},
 	"files": [
 		"index.js"
@@ -31,7 +32,8 @@
 		"ava": "^3.12.1",
 		"codecov": "^3.7.2",
 		"nyc": "^15.1.0",
-		"xo": "^0.47.0"
+		"xo": "^0.47.0",
+		"husky": "^7.0.0"
 	},
 	"ava": {
 		"babel": true

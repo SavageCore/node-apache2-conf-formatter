@@ -1,4 +1,5 @@
-# apache2-conf-formatter [![Travis](https://img.shields.io/travis/SavageCore/node-apache2-conf-formatter.svg?style=flat-square)](https://travis-ci.org/SavageCore/node-apache2-conf-formatter/) [![Codecov](https://img.shields.io/codecov/c/github/SavageCore/node-apache2-conf-formatter.svg?style=flat-square)](https://codecov.io/gh/SavageCore/node-apache2-conf-formatter/)
+# apache2-conf-formatter [![Build Status](https://img.shields.io/github/workflow/status/SavageCore/node-apache2-conf-formatter/test)](https://github.com/SavageCore/node-apache2-conf-formatter/actions/workflows/npm-test.yml)
+ [![Codecov](https://img.shields.io/codecov/c/github/SavageCore/node-apache2-conf-formatter.svg?style=flat-square)](https://codecov.io/gh/SavageCore/node-apache2-conf-formatter/)
 
 > Format apache2 configuration files
 
