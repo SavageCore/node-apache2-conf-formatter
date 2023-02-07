@@ -24,7 +24,7 @@
 		""
 	],
 	"dependencies": {
-		"fs-jetpack": "^4.2.0",
+		"fs-jetpack": "^5.1.0",
 		"repeat-string": "^1.6.1"
 	},
 	"devDependencies": {
